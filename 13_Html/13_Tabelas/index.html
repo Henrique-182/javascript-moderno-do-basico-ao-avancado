@@ -1,0 +1,48 @@
+<!-- 
+    pm i -g http-server 
+    http-server -c-1 -p 9090.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+    <style>
+        #conteudo {
+            padding: 30px 0px
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exercícios HTML</h1>
+    </header>
+
+    <nav>
+        <a href="./teste/teste.html">00 - Teste</a>
+        <a href="./tabela.html">08 - Tabelas</a>
+    </nav>
+
+    <section id="conteudo"></section>
+
+    <footer>
+        <br>
+        Curso de Web Moderno
+    </footer>
+
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+            const conteudo = document.getElementById('conteudo')
+            
+            link.onclick = function (e) {
+                e.preventDefault()
+
+                fetch(link.href)
+                    .then(resp => resp.text())
+                    .then(html => conteudo.innerHTML = html)
+            }
+        })
+    </script>
+</body>
+</html>

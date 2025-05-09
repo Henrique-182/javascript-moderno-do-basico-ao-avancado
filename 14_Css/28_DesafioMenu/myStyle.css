@@ -1,0 +1,94 @@
+* {
+    text-decoration: none;
+    color: white;
+}
+
+.cabecalho {
+    position: relative;
+    height: 125px;
+    background-color: gray;
+}
+
+.logo, .menu-toggle, .menu, .autenticacao {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px;
+}
+
+li {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 70px;
+}
+
+li:hover {
+    background-color: blue;
+}
+
+li > a {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translate(-50%, -50%);
+}
+
+aside {
+    position: absolute;
+    top: 50%;
+    transform: translate(100%, -50%);
+}
+
+
+.botao {
+    font-size: 16px;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 25px;
+}
+
+.destaque {
+    background: tomato;
+}
+
+@media (max-width: 600px) {
+    .menu-toggle {
+        display: inline-block;
+    }
+    
+    .menu {
+        display: none;
+    }
+
+    .autenticacao {
+        display: none;
+    }
+}
+
+@media (min-width: 825px) and (max-width: 1200px) {
+    .menu-toggle {
+        display: none;
+    }
+    
+    .menu {
+        display: inline-block;
+    }
+
+    .autenticacao {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .menu-toggle {
+        display: none;
+    }
+    
+    .menu {
+        display: inline-block;
+    }
+
+    .autenticacao {
+        display: inline-block;
+    }
+}
